@@ -1,0 +1,56 @@
+.albums-list {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: calc((100% - 40px) / 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.albums-list__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.albums-list__add {
+  display: block;
+  margin-right: auto;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: transparent;
+  color: #222;
+  border: 1px solid #222;
+  padding: 15px 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.albums-list__list {
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: scroll;
+  margin: 0 -30px;
+  padding: 0 30px;
+}
+
+.albums-list__list-item {
+  margin-bottom: 10px;
+}
+
+.albums-list__item-btn {
+  background-color: #fff;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #222;
+  border-radius: 4px;
+  text-align: left;
+}
