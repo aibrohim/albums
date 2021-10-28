@@ -1,8 +1,12 @@
 import "./album-form.scss";
 import Section from "../section/section";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AlbumsContext } from "../../contexts/albums";
 
-const AlbumForm = ({type, activeAlbum, albums}) => {
+const AlbumForm = () => {
+  const values = useContext(AlbumsContext);
+  const {formType: type, activeAlbum, albums} = values;
+  
   const [albumName, setAlbumName] = useState("");
 
   useEffect(() => {

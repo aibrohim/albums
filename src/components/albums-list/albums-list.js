@@ -1,7 +1,17 @@
+import { useContext, useEffect } from "react";
+import { AlbumsContext } from "../../contexts/albums";
 import Section from "../section/section";
 import "./albums-list.scss";
 
-const AlbumsList = ({albums, formType, setFormType, setActiveAlbum}) => {
+const AlbumsList = () => {
+  const {albums, formType, setFormType, setActiveAlbum, setAlbums} = useContext(AlbumsContext);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/albums')
+      .then(response => response.json())
+      .then(data => setAlbums(data))
+  }, [setAlbums]);
+
   const handleListClick = (evt) => {
     if (evt.target.matches("button")) {
       if (formType === "ADD") {
